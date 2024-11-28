@@ -7,12 +7,6 @@ fun isValid(string: String , patern:String): Boolean {
     return regex.matches(string)
 }
 
-fun main() {
-    isValid("HH129844" , "^[A-Z]{2}\\d{6}$")
-    println(isValid("HH129844" , "^[A-Z]{2}\\d{6}$"))
-}
-
-
 
 
     class User(
