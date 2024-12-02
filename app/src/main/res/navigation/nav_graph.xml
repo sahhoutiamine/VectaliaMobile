@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.vectaliamobile.LOGIN.logIn.LogIn"
+        android:name="com.example.vectaliamobile.logIn.LogIn"
         android:label="Login"
         tools:layout="@layout/login_activity">
         <action
@@ -16,7 +16,7 @@
 
     <fragment
         android:id="@+id/signupFragment"
-        android:name="com.example.vectaliamobile.LOGIN.singUp.SignUp"
+        android:name="com.example.vectaliamobile.LOGIN.signUp.SignUp"
         android:label="Sign Up"
         tools:layout="@layout/signup_activity">
         <action

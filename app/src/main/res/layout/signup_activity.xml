@@ -1,105 +1,399 @@
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
 
-    <EditText
-        android:id="@+id/singUpPasswordVerification"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Verify Password"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="551dp" />
+        android:padding="16dp">
 
-    <EditText
-        android:id="@+id/singUpTel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Telephone"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="185dp" />
 
-    <EditText
-        android:id="@+id/singUpEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Email"
-        tools:layout_editor_absoluteX="6dp"
-        tools:layout_editor_absoluteY="2dp" />
+        <TextView
+            android:id="@+id/titleVectaleSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/vectaleTitle"
+            android:textSize="45sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/singUpNom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nom"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="63dp" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@string/sign_up_to_vectale"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleVectaleSignUp" />
 
-    <EditText
-        android:id="@+id/singUpPrenom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Prenom"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="124dp" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/or"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-    <EditText
-        android:id="@+id/singUpDateN"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="date Naissense"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="246dp" />
+        <TextView
+            android:id="@+id/switchToLoginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/log_in"
+            android:textSize="20sp"
+            android:textColor="@color/loginColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.07"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-    <EditText
-        android:id="@+id/singUpAdresse"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="adresse"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="307dp" />
 
-    <EditText
-        android:id="@+id/singUpCIN"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="CIN"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="368dp" />
+        <TextView
+            android:id="@+id/emailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@string/email"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switchToLoginButton" />
 
-    <EditText
-        android:id="@+id/singUpCNE"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="CNE"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="429dp" />
+        <TextView
+            android:id="@+id/requiredIndicator"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:text="@string/required_indicator"
+            android:textColor="#FF0000"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/emailText"
+            app:layout_constraintTop_toTopOf="@+id/emailText" />
 
-    <EditText
-        android:id="@+id/singUpPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Password"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="490dp" />
+        <EditText
 
-    <Button
-        android:id="@+id/signupButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sign Up"
-        tools:layout_editor_absoluteX="7dp"
-        tools:layout_editor_absoluteY="617dp" />
+            android:inputType="textEmailAddress"
+            android:id="@+id/signUpEmail"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:hint="@string/email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailText" />
 
-    <TextView
-        android:id="@+id/switchToLoginButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Log In"
-        tools:layout_editor_absoluteX="171dp"
-        tools:layout_editor_absoluteY="649dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/nomText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/nom"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpEmail" />
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:text="@string/required_indicator"
+            android:textColor="#FF0000"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/nomText"
+            app:layout_constraintTop_toTopOf="@+id/nomText" />
+
+        <EditText
+
+            android:inputType="text"
+            android:id="@+id/signUpNom"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:hint="@string/nom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nomText" />
+
+        <TextView
+            android:id="@+id/prenomText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/prenom"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpNom" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:text="@string/required_indicator"
+            android:textColor="#FF0000"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/prenomText"
+            app:layout_constraintTop_toTopOf="@+id/prenomText" />
+
+        <EditText
+
+            android:inputType="text"
+            android:id="@+id/signUpPrenom"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:hint="@string/prenom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/prenomText" />
+
+
+        <TextView
+            android:id="@+id/telText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/telephone"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpPrenom" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:text="@string/required_indicator"
+            android:textColor="#FF0000"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/telText"
+            app:layout_constraintTop_toTopOf="@+id/telText" />
+
+        <EditText
+
+            android:inputType="number"
+            android:id="@+id/signUpTel"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:hint="@string/telephone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/telText" />
+
+
+        <TextView
+            android:id="@+id/dateNaissText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/date_naissense"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpTel" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:text="@string/required_indicator"
+            android:textColor="#FF0000"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/dateNaissText"
+            app:layout_constraintTop_toTopOf="@+id/dateNaissText" />
+
+
+        <EditText
+            android:id="@+id/signUpDateN"
+            android:inputType="date"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:hint="@string/date_naissense"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateNaissText" />
+
+        <TextView
+            android:id="@+id/adresseText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/adresse"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpDateN" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:text="@string/required_indicator"
+            android:textColor="#FF0000"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/adresseText"
+            app:layout_constraintTop_toTopOf="@+id/adresseText" />
+
+
+        <EditText
+            android:id="@+id/signUpAdresse"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:hint="@string/adresse"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adresseText" />
+
+        <TextView
+            android:id="@+id/cinText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/cin"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpAdresse" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:text="@string/required_indicator"
+            android:textColor="#FF0000"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/cinText"
+            app:layout_constraintTop_toTopOf="@+id/cinText" />
+
+
+        <EditText
+            android:id="@+id/signUpCIN"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:hint="@string/cin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cinText" />
+
+        <TextView
+            android:id="@+id/cneText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/cne"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpCIN" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:text="@string/required_indicator"
+            android:textColor="#FF0000"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/cneText"
+            app:layout_constraintTop_toTopOf="@+id/cneText" />
+
+        <EditText
+            android:id="@+id/signUpCNE"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:hint="@string/cne"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cneText" />
+
+
+        <TextView
+            android:id="@+id/pwText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/password"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpCNE" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:text="@string/required_indicator"
+            android:textColor="#FF0000"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/pwText"
+            app:layout_constraintTop_toTopOf="@+id/pwText" />
+
+
+        <EditText
+
+            android:inputType="textPassword"
+            android:id="@+id/signUpPassword"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:hint="@string/password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pwText" />
+
+        <TextView
+            android:id="@+id/pwVerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/verify_password"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpPassword" />
+
+
+        <EditText
+
+            android:inputType="textPassword"
+            android:id="@+id/signUpPasswordVerification"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:hint="@string/verify_password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pwVerText" />
+
+        <Button
+            android:id="@+id/signupButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="@string/sign_up"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/signUpPasswordVerification" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+

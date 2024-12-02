@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">VectaliaMobile</string>
+    <string name="app_name">VectaleMobile</string>
     <string name="vectale">Vectale</string>
     <string name="vectaleTitle">VECTALE</string>
     <string name="log_in">Log In</string>
@@ -7,4 +7,18 @@
     <string name="password">Password</string>
     <string name="sing_in">Sing In</string>
     <string name="email_or_code">Email or Code :</string>
+    <string name="verify_password">Verify Password</string>
+    <string name="telephone">Telephone</string>
+    <string name="nom">Nom</string>
+    <string name="prenom">Prenom</string>
+    <string name="date_naissense">Date Naissense</string>
+    <string name="adresse">Adresse</string>
+    <string name="cin">CIN</string>
+    <string name="cne">CNE</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_up_to_vectale">Sign Up to Vectale</string>
+    <string name="or">or</string>
+    <string name="required">*</string>
+    <string name="required_indicator">*</string>
+    <string name="are_you_new">Are you New ?</string>
 </resources>
