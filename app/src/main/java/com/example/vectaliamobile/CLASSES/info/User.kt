@@ -10,7 +10,7 @@ fun isValid(string: String , patern:String): Boolean {
 
 
     class User(
-        private val id: Int,
+        val id: Int,
         private val nom: String,
         private val prenom: String,
         private val Tel: String,

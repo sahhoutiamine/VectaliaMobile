@@ -5,13 +5,13 @@ import java.sql.Date
 import java.util.Calendar
 
 class Abonmont(
-    val code: Int,
+    val code: String,
     val idUser: Int,
     val tayb: typeAbonmon,
     val dateCreation: Date,
     val dateTermin: Date
 ) {
-    constructor(code: Int, idUser: Int, tayb: typeAbonmon) : this(
+    constructor(code: String, idUser: Int, tayb: typeAbonmon) : this(
         code,
         idUser,
         tayb,

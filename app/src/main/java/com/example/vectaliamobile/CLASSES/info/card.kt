@@ -9,7 +9,7 @@ import java.util.Date
 
 class Card(
     val id: Int,
-    val code: Int,
+    val code: String,
     var disponible: Boolean
 ) {
     val listPiment = mutableListOf<piment>()
