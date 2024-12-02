@@ -16,7 +16,7 @@
 
     <fragment
         android:id="@+id/signupFragment"
-        android:name="com.example.vectaliamobile.LOGIN.signUp.SignUp"
+        android:name="com.example.vectaliamobile.signUp.SignUp"
         android:label="Sign Up"
         tools:layout="@layout/signup_activity">
         <action

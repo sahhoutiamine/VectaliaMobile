@@ -89,18 +89,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginButton" />
 
-    <TextView
+
+    <Button
         android:id="@+id/switchToSignUpButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="4dp"
+        android:layout_width="108dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="100dp"
         android:text="@string/sign_up"
-        android:textSize="16sp"
-        android:textColor="@color/loginColor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toTopOf="@+id/textView6" />
+        android:textSize="10dp"
+        app:layout_constraintStart_toEndOf="@+id/emailLoginText"
+        app:layout_constraintTop_toBottomOf="@+id/VectaleTitle"
+        tools:ignore="TextSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

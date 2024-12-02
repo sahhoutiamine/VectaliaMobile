@@ -1,5 +1,4 @@
-package com.example.vectaliamobile.LOGIN.logIn
-
+package com.example.vectaliamobile.logIn
 
 import android.os.Bundle
 import android.view.LayoutInflater
