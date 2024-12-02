@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.vectaliamobile.R
@@ -17,7 +18,7 @@ class LogIn : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.login_activity, container, false)
 
-        val switchToSignUpButton: Button = view.findViewById(R.id.switchToSignUpButton)
+        val switchToSignUpButton: TextView = view.findViewById(R.id.switchToSignUpButton)
         switchToSignUpButton.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_signupFragment)
         }

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -49,7 +50,7 @@ class SignUp : Fragment(R.layout.signup_activity) {
         }
 
         // Back to Login Button
-        view.findViewById<Button>(R.id.switchToLoginButton).setOnClickListener {
+        view.findViewById<TextView>(R.id.switchToLoginButton).setOnClickListener {
             findNavController().navigate(R.id.action_signupFragment_to_loginFragment)
         }
     }

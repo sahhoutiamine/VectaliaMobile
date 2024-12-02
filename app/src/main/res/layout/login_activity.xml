@@ -6,30 +6,17 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <TextView
-        android:id="@+id/VectaleTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/vectaleTitle"
-        android:textSize="50sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/emailLoginText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="40dp"
         android:text="@string/email"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/VectaleTitle" />
-
-
-
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
         android:id="@+id/loginEmail"
@@ -39,6 +26,7 @@
         android:hint="@string/email"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailLoginText" />
 
@@ -90,16 +78,27 @@
         app:layout_constraintTop_toBottomOf="@+id/loginButton" />
 
 
-    <Button
+    <TextView
         android:id="@+id/switchToSignUpButton"
         android:layout_width="108dp"
         android:layout_height="52dp"
-        android:layout_marginStart="212dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="36dp"
         android:text="@string/sign_up"
-        android:textSize="10dp"
-        app:layout_constraintStart_toEndOf="@+id/emailLoginText"
-        app:layout_constraintTop_toBottomOf="@+id/VectaleTitle"
+        android:textSize="16dp"
+        android:textColor="@color/loginColor"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/loginButton"
         tools:ignore="TextSizeCheck" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="373dp"
+        android:layout_height="255dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/vectalia" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
