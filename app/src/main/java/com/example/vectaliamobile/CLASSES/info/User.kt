@@ -10,16 +10,16 @@ fun isValid(string: String , patern:String): Boolean {
 
 
     class User(
-        val id: Int,
-        val nom: String,
-        val prenom: String,
-        val Tel: String,
-        val DateNaissanse: String,
-        val adresse: String,
-        val CIN: String,
-        val CNE: String,
-        var Email : String,
-        var Password : String
+        private val id: Int,
+        private val nom: String,
+        private val prenom: String,
+        private val Tel: String,
+        private val DateNaissanse: String,
+        private val adresse: String,
+        private  val CIN: String,
+        private  val CNE: String,
+        private var Email : String,
+        private var Password : String
     ) {
         init {
             if (!isValid(CIN,"^[A-Z]{2}\\d{6}$")) {
