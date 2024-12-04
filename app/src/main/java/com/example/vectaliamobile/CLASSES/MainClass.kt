@@ -1,5 +1,8 @@
 package com.example.vectaliamobile.CLASSES
 
+import com.example.vectaliamobile.CLASSES.data.listAbonmont
+import com.example.vectaliamobile.CLASSES.data.listCard
+import com.example.vectaliamobile.CLASSES.data.listUsers
 import com.example.vectaliamobile.CLASSES.data.typeAbonmon
 import com.example.vectaliamobile.CLASSES.info.Abonmont
 import com.example.vectaliamobile.CLASSES.info.Card
@@ -13,9 +16,6 @@ fun generateRandomData(): String {
 }
 
 class MainClass {
-    private val listUsers = mutableListOf<User>()
-    private val listAbonmont = mutableListOf<Abonmont>()
-    private val listCard = mutableListOf<Card>()
     fun addUsers( user: User){
         listUsers.add(user)
         val Abon = Abonmont(generateRandomData() , user.id , typeAbonmon.Scolaire)

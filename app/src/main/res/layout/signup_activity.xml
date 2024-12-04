@@ -171,12 +171,12 @@
 
         <EditText
 
-            android:inputType="number"
             android:id="@+id/signUpTel"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginTop="12dp"
             android:hint="@string/telephone"
+            android:inputType="phone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
