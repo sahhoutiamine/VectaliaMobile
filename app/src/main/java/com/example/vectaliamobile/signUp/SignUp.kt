@@ -8,7 +8,28 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.vectaliamobile.CLASSES.data.listUsers
+import com.example.vectaliamobile.CLASSES.info.User
 import com.example.vectaliamobile.R
+
+fun creatUser(nom : String ,
+              prenom : String ,
+              tel : String ,
+              email : String ,
+              dateNaissance : String ,
+              Ville : String ,
+              cne : String ,
+              cni : String ,
+              pass : String
+): String? {
+    try {
+        var user = User(listUsers.size , nom , prenom , tel , dateNaissance , Ville , cni ,cne , email ,pass)
+
+        return "Inscription réussie !"
+    }catch (e : Exception){
+        return e.message
+    }
+}
 
 class SignUp : Fragment(R.layout.signup_activity) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -44,9 +65,9 @@ class SignUp : Fragment(R.layout.signup_activity) {
                 Toast.makeText(requireContext(), "Les mots de passe ne correspondent pas", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-
+            var messeg = creatUser(nom , prenom , tel , email , dateNaissance , ville , cne , cni , password)
             // Proceed with sign-up logic (e.g., API call)
-            Toast.makeText(requireContext(), "Inscription réussie !", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(),messeg, Toast.LENGTH_SHORT).show()
         }
 
         // Back to Login Button

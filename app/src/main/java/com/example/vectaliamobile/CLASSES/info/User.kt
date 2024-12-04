@@ -10,7 +10,7 @@ fun isValid(string: String , patern:String): Boolean {
 
 
     class User(
-        private val id: Int,
+        val id: Int,
         private val nom: String,
         private val prenom: String,
         private val Tel: String,
@@ -24,12 +24,12 @@ fun isValid(string: String , patern:String): Boolean {
         init {
             if (!isValid(CIN,"^[A-Z]{2}\\d{6}$")) {
                 throw IllegalArgumentException("Verifiez le CIN")
-            } else if (!isValid(Tel,"^+212 \\d{9}$")) {
+            } else if (!isValid(Tel,"^\\+212\\d{9}$") && !isValid(Tel,"^\\06\\d{8}$") ) {
                 throw IllegalArgumentException("Verifiez le Telephone")
             } else if (!isValid(DateNaissanse , "^\\d{2}/\\d{2}/\\d{4}$")) {
                 throw IllegalArgumentException("Verifiez le Dtat Naissanse")
             }else if (!isValid(Email , "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$")){
-                throw IllegalArgumentException("Verifiez le Email")
+                throw IllegalArgumentException("Verifiez le ")
             }else if (Password.length < 8){
                 throw IllegalArgumentException("Verifiez le Password")
             }else if (!isValid(CNE , "^[A-Z]\\d{9}$")){
