@@ -21,21 +21,21 @@ fun isValid(string: String , patern:String): Boolean {
         var Email1 : String,
         var Password : String
     ) {
-//        init {
-//            if (!isValid(CIN,"^[A-Z]{2}\\d{6}$")) {
-//                throw IllegalArgumentException("Verifiez le CIN")
-//            } else if (!isValid(Tel,"^\\+212\\d{9}$")) {
-//                throw IllegalArgumentException("Verifiez le Telephone")
-//            } else if (!isValid(DateNaissanse , "^\\d{2}/\\d{2}/\\d{4}$")) {
-//                throw IllegalArgumentException("Verifiez le Dtat Naissanse")
-//            }else if (!isValid(Email , "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$")){
-//                throw IllegalArgumentException("Verifiez le ")
-//            }else if (Password.length < 8){
-//                throw IllegalArgumentException("Verifiez le Password")
-//            }else if (!isValid(CNE , "^[A-Z]\\d{9}$")){
-//                throw IllegalArgumentException("Verifiez le CNE")
-//            }
-//        }
+        init {
+            if (!isValid(CIN,"^[A-Z]{2}\\d{6}$")) {
+                throw IllegalArgumentException("Verifiez le CIN")
+            } else if (!isValid(Tel,"^\\+212\\d{9}$")) {
+                throw IllegalArgumentException("Verifiez le Telephone")
+            } else if (!isValid(DateNaissanse , "^\\d{2}/\\d{2}/\\d{4}$")) {
+                throw IllegalArgumentException("Verifiez le Dtat Naissanse")
+            }else if (!isValid(Email1 , "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$")){
+                throw IllegalArgumentException("Verifiez le ")
+            }else if (Password.length < 8){
+                throw IllegalArgumentException("Verifiez le Password")
+            }else if (!isValid(CNE , "^[A-Z]\\d{9}$")){
+                throw IllegalArgumentException("Verifiez le CNE")
+            }
+        }
         fun setEmail(): String {
             return Email1
         }
