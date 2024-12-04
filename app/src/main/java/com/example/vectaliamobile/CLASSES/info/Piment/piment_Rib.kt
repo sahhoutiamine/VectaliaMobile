@@ -10,5 +10,6 @@ class piment_Rib (
      IdCaret : Int ,
     val Img : Image
 
-):piment(idPiment , DatePiment , IdCaret) {
+):piment(idPiment , DatePiment , IdCaret)
+{
 }

@@ -29,5 +29,13 @@ class MainClass {
     fun addCard(card: Card){
       listCard.add(card)
     }
+    fun recherch(Email : String , Password : String):Int{
+        for ( i in listUsers){
+            if (i.Email1 == Email && i.Password == Password){
+                return i.id
+            }
+        }
+        return -1
+    }
 
 }

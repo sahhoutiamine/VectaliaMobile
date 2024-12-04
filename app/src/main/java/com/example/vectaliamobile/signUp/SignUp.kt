@@ -1,16 +1,23 @@
 package com.example.vectaliamobile.signUp
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.core.content.ContextCompat.startActivity
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import com.example.vectaliamobile.CLASSES.MainClass
 import com.example.vectaliamobile.CLASSES.data.listUsers
 import com.example.vectaliamobile.CLASSES.info.User
+import com.example.vectaliamobile.MainActivity
 import com.example.vectaliamobile.R
+import com.example.vectaliamobile.activityMain
 
 fun creatUser(nom : String ,
               prenom : String ,
@@ -24,7 +31,7 @@ fun creatUser(nom : String ,
 ): String? {
     try {
         var user = User(listUsers.size , nom , prenom , tel , dateNaissance , Ville , cni ,cne , email ,pass)
-
+        MainClass().addUsers(user)
         return "Inscription réussie !"
     }catch (e : Exception){
         return e.message
@@ -68,12 +75,15 @@ class SignUp : Fragment(R.layout.signup_activity) {
             var messeg = creatUser(nom , prenom , tel , email , dateNaissance , ville , cne , cni , password)
             // Proceed with sign-up logic (e.g., API call)
             Toast.makeText(requireContext(),messeg, Toast.LENGTH_SHORT).show()
+
         }
 
         // Back to Login Button
         view.findViewById<TextView>(R.id.switchToLoginButton).setOnClickListener {
             findNavController().navigate(R.id.action_signupFragment_to_loginFragment)
         }
+
+
     }
 }
 
